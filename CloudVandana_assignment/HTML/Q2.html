@@ -1,0 +1,173 @@
+<!-- Survey Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Survey Form using HTML and CSS </title>
+
+	<style>
+		/* Styling the Body element i.e. Color, Font, Alignment */ 
+		body {
+			background-color: #0080FF;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 20px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */ 
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #0080FF;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 18px;
+			display: block;
+      		padding:10px 20px;
+      		color:white;
+			margin-top: 20px;
+			margin-bottom: 20px;
+      		border-style:none;
+		}
+        h1  {
+      	    color: white;
+      	    }
+
+        .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .user-detail{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gender{
+            margin-right: 20px;
+        }
+
+        .input-box{
+            margin: 0px 0 12px 0;
+            width: calc(100%/2 - 20px);
+            
+        }
+
+        .input-box .details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+	</style>
+</head>
+
+<body>
+	<h1>Customer Survey Form</h1>
+	<form id="form">
+        <div class="user-details">
+		    <div class="input-box form-control">
+			    <label class="details" for="name" id="label-name">Name</label>
+			    <input type="text"id="name" />
+		    </div>
+
+		    <div class="input-box form-control">
+			    <label class="details" for="email" id="label-email">Email</label>
+			    <input type="email" id="email" />
+		    </div>
+        </div>
+
+        <div class="form-control">
+			<label>
+				Is this first time You are using our products & service?
+			</label>
+			<div class="user-detail">
+                <label class="gender" for="recommed-1">
+                    <input type="radio"id="recommed-1"name="recommed">Yes</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio" id="recommed-2" name="recommed">No</input>
+                </label>
+		    </div>
+        </div>
+
+		<div class="form-control">
+			<label>
+				Would you suggestion to your friends and colleague?
+			</label>
+            <div class="user-detail">
+                <label class="gender" for="recommed-1">
+                    <input type="radio"id="recommed-1"name="recommed">Yes</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio" id="recommed-2" name="recommed">No</input>
+                </label>
+		    </div>
+		</div>
+
+        <div class="form-control">
+			<label>
+				How satisfied are you with our company overall?
+			</label>
+            <div class="user-detail">
+                <label class="gender" for="recommed-1">
+                    <input type="radio"id="recommed-1"name="recommed">Satisfied</input>
+                </label>
+                <label class="gender" for="recommed-2">
+                    <input type="radio" id="recommed-2" name="recommed">Undecided</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio" id="recommed-2" name="recommed">Unsatisfied</input>
+                </label>
+		    </div>
+		</div>
+
+		<div class="form-control">
+			<label for="comment">
+				Do You have suggestion to improve our service?
+			</label>
+			<textarea name="comment" id="comment"></textarea>
+		</div>
+		<button type="submit" value="submit">Submit</button>
+	</form>
+</body>
+</html>
